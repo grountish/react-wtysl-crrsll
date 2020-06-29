@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+html,
+body {
+  box-sizing: border-box;
+  /* overflow: hidden; */
+  background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.experience {
+  height: 100vh;
+  width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.direction-buttons {
+  position: absolute;
+  bottom: 30%;
+  display: flex;
+  width: 94vw;
+  z-index: 5;
+  justify-content: space-between;
+  padding: 3%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.direction-buttons button {
+  padding: 2% 6%;
+}
+
+#firstOverlay {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 8 !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: rgba(33, 33, 33, 0.7);
 }
 
-.App-link {
-  color: #61dafb;
+#firstOverlay * {
+  font-family: 'Lato', sans-serif !important;
+  color: #fac553;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.slider-top-container {
+  position: absolute;
+  top: 11%;
+  z-index: 9 !important;
+  display: flex;
+  flex-direction: row;
+  width: 96vw;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+.slider-top-button {
+  width: 4.5%;
+  padding: 3px 10px;
+  margin: 3px;
+  border-radius: 0%;
+  background-color: rgba(83, 83, 83, 0.6);
+}
+
+.logo {
+  position: absolute;
+  bottom: 65%; 
+  left: 3%;
+  width: 60px;
+  z-index: 10;
+}
+
+.arrows {
+  width: 20px;
+  height: 30px;
+}
+
+
+video {
+  width: 100vw;
+  height: 100vh;
+}
+
+.dadDiv {
+  text-align: center;
+  background-color: black;
+}
+/* 
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  video {
+    width: 95%;
   }
-  to {
-    transform: rotate(360deg);
+} */
+
+.turn-container {
+  width: 100vw;
+  background-color: black;
+  display: none;
+}
+
+.turn-img {
+  width: 300px;
+}
+
+@media only screen and (orientation: portrait) {
+  .turn-container {
+    display: block;
+    text-align:center;
+    padding: 75% 0;
+    position: absolute;
+    top: 5vh;
   }
+
+  video {
+    display: none;
+  }
+
+  #firstOverlay {
+    display: none;
+  }
+  .experience{
+    display: none;
+  }
+}
+
+.iphone-check{
+  height: 100px;
 }

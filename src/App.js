@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Slider from './Components/Slider.jsx';
+import IphoneChecker from './Components/IphoneChecker.jsx';
+import Logo from './resources/Logo.png'
+import Turn from './resources/Artboard 1 copy 2.png';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <IphoneChecker />
+      <div className="App">
+        <div className="turn-container"><img src={Turn} className="turn-img" alt="turn" /></div>
+        <img src={Logo} alt="logo" className="logo" />
+        <Slider />
+      </div>
     </div>
   );
 }
