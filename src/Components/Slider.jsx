@@ -20,11 +20,13 @@ import slide18 from './../resources/Jafra Slide 18.mp4'
 import arrowLeft from './../resources/left-arrow.png'
 import arrowRight from './../resources/right-arrow.png'
 
+
 export class Slider extends Component {
 
     state = {
         video: 1,
-        firstTime: true
+        firstTime: true,
+        reized: false
     };
 
     
@@ -57,6 +59,10 @@ export class Slider extends Component {
 
     };
 
+    pause=()=>{
+        this.videoElement.paused ? this.videoElement.play() : this.videoElement.pause();
+    }
+
     render() {
 
         const xp = () => {
@@ -69,25 +75,25 @@ export class Slider extends Component {
                             <h4>Navigate through the story clicking on the arrows </h4>
                         </div>
                         : null
-                }  <div  className="dadDiv"><video ref={el => this.videoElement = el} src={slide1} autoPlay muted loop playsInline></video></div></div>;
+                }  <div  className="dadDiv"><video onClick={this.pause} ref={el => this.videoElement = el} src={slide1} autoPlay muted loop playsInline></video></div></div>;
 
-                case 2: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide2} autoPlay loop playsInline> </video></div>;
-                case 3: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide3} autoPlay loop playsInline> </video></div>;
-                case 4: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide4} autoPlay loop playsInline> </video></div>;
-                case 5: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide5} autoPlay loop playsInline> </video></div>;
-                case 6: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide6} autoPlay loop playsInline> </video></div>;
-                case 7: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide7} autoPlay loop playsInline> </video></div>;
-                case 8: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide8} autoPlay loop playsInline> </video></div>;
-                case 9: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide9} autoPlay loop playsInline> </video></div>;
-                case 10: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide10} autoPlay loop playsInline> </video></div>;
-                case 11: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide11} autoPlay loop playsInline> </video></div>;
-                case 12: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide12} autoPlay loop playsInline> </video></div>;
-                case 13: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide13} autoPlay loop playsInline> </video></div>;
-                case 14: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide14} autoPlay loop playsInline> </video></div>;
-                case 15: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide15} autoPlay loop playsInline> </video></div>;
-                case 16: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide16} autoPlay loop playsInline> </video></div>;
-                case 17: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide17} autoPlay loop playsInline> </video></div>;
-                case 18: return <div className="dadDiv"> <video ref={el => this.videoElement = el} src={slide18} autoPlay loop playsInline> </video></div>;
+                case 2: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide2} autoPlay loop playsInline> </video></div>;
+                case 3: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide3} autoPlay loop playsInline> </video></div>;
+                case 4: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide4} autoPlay loop playsInline> </video></div>;
+                case 5: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide5} autoPlay loop playsInline> </video></div>;
+                case 6: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide6} autoPlay loop playsInline> </video></div>;
+                case 7: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide7} autoPlay loop playsInline> </video></div>;
+                case 8: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide8} autoPlay loop playsInline> </video></div>;
+                case 9: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide9} autoPlay loop playsInline> </video></div>;
+                case 10: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide10} autoPlay loop playsInline> </video></div>;
+                case 11: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide11} autoPlay loop playsInline> </video></div>;
+                case 12: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide12} autoPlay loop playsInline> </video></div>;
+                case 13: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide13} autoPlay loop playsInline> </video></div>;
+                case 14: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide14} autoPlay loop playsInline> </video></div>;
+                case 15: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide15} autoPlay loop playsInline> </video></div>;
+                case 16: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide16} autoPlay loop playsInline> </video></div>;
+                case 17: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide17} autoPlay loop playsInline> </video></div>;
+                case 18: return <div className="dadDiv"> <video onClick={this.pause} ref={el => this.videoElement = el} src={slide18} autoPlay loop playsInline> </video></div>;
 
 
                 default: return <h1>No videoo match</h1>
@@ -95,6 +101,8 @@ export class Slider extends Component {
         }
         return (
             <div className="experience">
+             {/* <IphoneChecker /> */}
+             
             <div className="slider-top-container">
                 <div onClick={()=> this.selectSlide(1)} style={{backgroundColor: this.state.video === 1 ? 'rgba(255, 202, 28, 0.705)': 'rgba(83, 83, 83, 0.6)'}} className="slider-top-button"></div>
                 <div onClick={()=> this.selectSlide(2)}  style={{backgroundColor: this.state.video === 2 ? 'rgba(255, 202, 28, 0.705)': 'rgba(83, 83, 83, 0.6)'}} className="slider-top-button"></div>
