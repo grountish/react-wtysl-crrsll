@@ -19,7 +19,7 @@ import slide17 from './../resources/Jafra Slide 17.mp4'
 import slide18 from './../resources/Jafra Slide 18.mp4'
 import arrowLeft from './../resources/left-arrow.png'
 import arrowRight from './../resources/right-arrow.png'
-
+import IphoneChecker from './IphoneChecker';
 
 export class Slider extends Component {
 
@@ -70,7 +70,8 @@ export class Slider extends Component {
 
                 case 1: return <div> {
                     this.state.firstTime ?
-                        <div onClick={this.startXP} id="firstOverlay">
+                        <div onClick={this.startXP} id="firstOverlay" className={(/CriOS/i.test(navigator.userAgent) &&
+                /iphone|ipod|ipad/i.test(navigator.userAgent)) ? "firstOverlay-ip" : 'firstOverlay'}>
                             <h1>Welcome to the Jafra experience</h1>
                             <h4>Navigate through the story clicking on the arrows </h4>
                         </div>
@@ -101,9 +102,10 @@ export class Slider extends Component {
         }
         return (
             <div className="experience">
-             {/* <IphoneChecker /> */}
+             <IphoneChecker />
              
-            <div className="slider-top-container">
+            <div className={/CriOS/i.test(navigator.userAgent) &&
+                /iphone|ipod|ipad/i.test(navigator.userAgent) ? "slider-top-container-ip" : "slider-top-container"}>
                 <div onClick={()=> this.selectSlide(1)} style={{backgroundColor: this.state.video === 1 ? 'rgba(255, 202, 28, 0.705)': 'rgba(83, 83, 83, 0.6)'}} className="slider-top-button"></div>
                 <div onClick={()=> this.selectSlide(2)}  style={{backgroundColor: this.state.video === 2 ? 'rgba(255, 202, 28, 0.705)': 'rgba(83, 83, 83, 0.6)'}} className="slider-top-button"></div>
                 <div onClick={()=> this.selectSlide(3)}  style={{backgroundColor: this.state.video === 3 ? 'rgba(255, 202, 28, 0.705)': 'rgba(83, 83, 83, 0.6)'}} className="slider-top-button"></div>
@@ -123,7 +125,8 @@ export class Slider extends Component {
                 <div onClick={()=> this.selectSlide(17)} style={{backgroundColor: this.state.video === 17 ? 'rgba(255, 202, 28, 0.705)': 'rgba(83, 83, 83, 0.6)'}}  className="slider-top-button"></div>
                 <div onClick={()=> this.selectSlide(18)} style={{backgroundColor: this.state.video === 18 ? 'rgba(255, 202, 28, 0.705)': 'rgba(83, 83, 83, 0.6)'}}  className="slider-top-button"></div>
             </div>
-                <div className="direction-buttons">
+                <div className={/CriOS/i.test(navigator.userAgent) &&
+                /iphone|ipod|ipad/i.test(navigator.userAgent) ? "direction-buttons-ip" : 'direction-buttons'}>
                     {
                         this.state.video === 1 ?
                             null

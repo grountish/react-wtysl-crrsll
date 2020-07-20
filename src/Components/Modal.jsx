@@ -24,7 +24,8 @@ export default class ExampleApp extends React.Component {
     render() {
         return (
             <div>
-                <img id="share-btn" src={ShareBtn} onClick={this.handleOpenModal} alt="share"/>
+                <img id="share-btn" className={/CriOS/i.test(navigator.userAgent) &&
+                /iphone|ipod|ipad/i.test(navigator.userAgent) ? "share-btn-ip" : "share-btn"} src={ShareBtn} onClick={this.handleOpenModal} alt="share"/>
                 
 
                 <ReactModal
@@ -44,10 +45,10 @@ export default class ExampleApp extends React.Component {
                             textAlign:'center',
                             display:'flex',
                             flexDirection:'column',
-                            top: '100px',
-                            left: '95px',
-                            right: '95px',
-                            bottom: '100px',
+                            top: '10px',
+                            left: '15px',
+                            right: '15px',
+                            bottom: '10px',
                             border: '0px solid #ccc',
                             background: 'transparent',
                             overflow: 'auto',
