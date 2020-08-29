@@ -172,14 +172,9 @@ video {
 }
 
 @media (min-height: 375px) and (min-width: 812px) {
-  .logo {
-    top: 10vh;
-  }
-
   .direction-buttons {
     bottom: 40%;
   }
-
 }
 
 
@@ -209,6 +204,10 @@ video {
   top: calc(90vh + 2px) !important;
   right: 25px;
   z-index: 10;
+}
+
+.closeButton {
+  
 }
 
 

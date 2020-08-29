@@ -2,6 +2,8 @@ import React from 'react'
 import ReactModal from 'react-modal'
 import { Twitter, Facebook, Linkedin, Whatsapp } from 'react-social-sharing'
 import ShareBtn from './../resources/sharebtn.png'
+import { GrClose } from 'react-icons/gr';
+import { IconContext } from "react-icons";
 
 export default class ExampleApp extends React.Component {
     constructor() {
@@ -9,8 +11,6 @@ export default class ExampleApp extends React.Component {
         this.state = {
             showModal: false
         };
-
-
     }
 
     handleOpenModal = () => {
@@ -43,9 +43,10 @@ export default class ExampleApp extends React.Component {
                         content: {
                             position: 'absolute',
                             textAlign:'center',
+                            margin: '0 auto',
                             display:'flex',
                             flexDirection:'column',
-                            top: '10px',
+                            top: '23%',
                             left: '15px',
                             right: '15px',
                             bottom: '10px',
@@ -55,22 +56,18 @@ export default class ExampleApp extends React.Component {
                             WebkitOverflowScrolling: 'touch',
                             borderRadius: '4px',
                             outline: 'none',
-                            padding: '20px'
                         }
-                    
-                    
                     }}
                 >
-
-                <button style={{marginLeft:'auto',marginRight:'5%',width:'30px',backgroundColor:'white',border:'0px'}} onClick={this.handleCloseModal}>X</button>
-                <div className="modal-container">
+                
+                <div onClick={this.handleCloseModal} className="modal-container">
+                <div className="closeButton" onClick={this.handleCloseModal}><svg stroke="white" fill="white" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="white" stroke="white" stroke-width="2" d="M3,3 L21,21 M3,21 L21,3"></path></svg></div>
                     <h1 style={{textAlign:'center',color:'white'}}>Share!</h1>
                     <Twitter link="https://whattookyousolong.com/experience" />
                     <Facebook link="https://whattookyousolong.com/experience" />
                     <Whatsapp link="https://whattookyousolong.com/experience" />
                     <Linkedin link="https://whattookyousolong.com/experience" />
                 </div>
-
                 </ReactModal>
             </div>
         );
