@@ -2,8 +2,6 @@ import React from 'react'
 import ReactModal from 'react-modal'
 import { Twitter, Facebook, Linkedin, Whatsapp } from 'react-social-sharing'
 import ShareBtn from './../resources/sharebtn.png'
-import { GrClose } from 'react-icons/gr';
-import { IconContext } from "react-icons";
 
 export default class ExampleApp extends React.Component {
     constructor() {
