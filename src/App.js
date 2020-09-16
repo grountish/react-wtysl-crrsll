@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Slider from './Components/Slider.jsx';
 import Logo from './resources/Logo.png'
+import home from './resources/hiclipart.com.png'
 import Turn from './resources/Artboard 1 copy 2.png';
 import Modal from './Components/Modal'
 
@@ -18,6 +19,7 @@ function App() {
         <div className="turn-container"><img src={Turn} className="turn-img" alt="turn" /></div>
         <Modal />
         <a href="https://www.whattookyousolong.org/"> <img src={Logo} alt="logo" className={(/CriOS/i.test(navigator.userAgent) && /iphone|ipod|ipad/i.test(navigator.userAgent))  ? "logo-ip" : "logo"} /></a>
+        <a href="https://www.whattookyousolong.org/interactive"> <img src={home} alt="home" className={(/CriOS/i.test(navigator.userAgent) && /iphone|ipod|ipad/i.test(navigator.userAgent))  ? "home-ip" : "home"} /></a>
         <Slider />
       </div>
     </div>

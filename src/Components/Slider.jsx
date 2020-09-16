@@ -72,8 +72,13 @@ export class Slider extends Component {
                     this.state.firstTime ?
                         <div onClick={this.startXP} id="firstOverlay" className={(/CriOS/i.test(navigator.userAgent) &&
                 /iphone|ipod|ipad/i.test(navigator.userAgent)) ? "firstOverlay-ip" : 'firstOverlay'}>
-                            <h1>Welcome to the Jafra experience</h1>
-                            <h4>Navigate through the story by clicking on the arrows </h4>
+                            <div className="textOverlay">
+                                 <h1>Welcome to the Jafra experience</h1>
+                            <h2>Each Slide is looped. </h2>
+                            <h2>Click the arrow when you're done reading. </h2>
+                            <h2>Press the spacebar to pause. </h2>
+                            </div>
+                           
                         </div>
                         : null
                 }  <div  className="dadDiv"><video onClick={this.pause} ref={el => this.videoElement = el} src={slide1} autoPlay muted loop playsInline></video></div></div>;
